@@ -6,7 +6,7 @@
     <title>Ning Ding</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,20 +15,39 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 400;
             line-height: 1.6;
-            color: #333;
+            color: #222;
             background: #fff;
-            max-width: 800px;
+            max-width: 780px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 60px 24px 40px;
+            font-size: 17px;
         }
 
+        a {
+            color: #1772d0;
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+
+        a:hover {
+            color: #f09228;
+            text-decoration: none;
+        }
+
+        /* ---------- Header ---------- */
         header {
-            margin-bottom: 50px;
             display: flex;
-            align-items: flex-start;
-            gap: 30px;
+            align-items: center;
+            gap: 34px;
+            margin-bottom: 8px;
+        }
+
+        .header-info {
+            flex: 1;
+            min-width: 0;
         }
 
         .profile-photo {
@@ -36,163 +55,142 @@
         }
 
         .profile-photo img {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             border-radius: 50%;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .header-info {
-            flex: 1;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.12);
         }
 
         h1 {
-            font-size: 2em;
-            font-weight: 600;
-            margin-bottom: 8px;
+            font-size: 2.1em;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 4px;
         }
 
         .chinese-name {
-            font-size: 1em;
-            color: #666;
-            margin-bottom: 15px;
+            font-size: 0.95em;
+            color: #777;
+            margin-bottom: 14px;
         }
 
         .chinese-name span {
             font-family: 'Ma Shan Zheng', cursive;
-            font-size: 125%;
+            font-size: 130%;
         }
 
         .affiliation {
             font-size: 1em;
-            color: #555;
-            margin-bottom: 5px;
+            color: #444;
+            margin-bottom: 2px;
         }
 
         .contact {
-            margin-top: 15px;
-            font-size: 1em;
+            margin-top: 12px;
+            font-size: 0.95em;
+            color: #444;
         }
 
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
+        .intro {
+            margin: 30px 0 8px;
+            color: #333;
         }
 
+        .intro .highlight {
+            font-weight: 700;
+        }
+
+        /* ---------- Sections ---------- */
         section {
-            margin-bottom: 45px;
+            margin-top: 42px;
         }
 
         h2 {
-            font-size: 1.4em;
-            font-weight: 600;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 8px;
-        }
-
-        .education-item, .teaching-item, .award-item {
-            margin-bottom: 15px;
-        }
-
-        .date {
-            color: #666;
-            font-size: 0.95em;
-        }
-
-        .research-project {
-            margin-bottom: 20px;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 18px;
+            padding-bottom: 7px;
+            border-bottom: 1px solid #e6e6e6;
         }
 
         h3 {
-            font-size: 1.15em;
-            font-weight: 600;
-            margin-bottom: 15px;
-            margin-top: 25px;
+            font-size: 1.12em;
+            font-weight: 700;
+            color: #333;
+            margin-top: 26px;
+            margin-bottom: 12px;
         }
 
         h3:first-of-type {
             margin-top: 0;
         }
 
+        .education-item, .teaching-item, .award-item {
+            margin-bottom: 16px;
+        }
+
+        .date {
+            color: #888;
+            font-size: 0.93em;
+        }
+
+        .research-project {
+            margin-bottom: 22px;
+            padding-left: 16px;
+            border-left: 3px solid #eaeaea;
+        }
+
         .research-project h4 {
             font-size: 1.05em;
-            font-weight: 600;
-            margin-bottom: 8px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .research-project p {
+            color: #333;
         }
 
         .supervisor {
-            color: #555;
-            margin-top: 5px;
-            font-size: 0.95em;
-        }
-
-        .supervisor a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        .supervisor a:hover {
-            text-decoration: underline;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-
-        li {
-            margin-bottom: 8px;
+            color: #666;
+            margin-top: 7px;
+            font-size: 0.93em;
         }
 
         .interests {
             line-height: 1.8;
+            color: #333;
         }
 
-        .personal-note {
-            font-style: italic;
-            color: #555;
-            margin-top: 10px;
-        }
-
+        /* ---------- Personal ---------- */
         .dog-tribute {
-            margin-top: 15px;
-            padding: 15px;
-            background: #f9f9f9;
-            border-left: 3px solid #ddd;
+            margin-top: 18px;
+            padding: 18px 20px;
+            background: #fafafa;
+            border-left: 3px solid #e6e6e6;
+            border-radius: 4px;
         }
 
         .dog-tribute p {
             color: #666;
-            font-size: 0.95em;
+            font-size: 0.93em;
             text-align: center;
         }
 
         .dog-tribute .dog-chinese-name {
             font-family: 'Ma Shan Zheng', cursive;
-            font-size: 125%;
+            font-size: 130%;
         }
 
         .dog-photo {
-            margin-bottom: 15px;
+            margin-bottom: 14px;
             text-align: center;
         }
 
         .dog-photo img {
-            max-width: 200px;
+            max-width: 190px;
             width: 100%;
             height: auto;
             border-radius: 8px;
@@ -200,37 +198,63 @@
         }
 
         footer {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-            color: #666;
-            font-size: 0.9em;
+            margin-top: 56px;
+            padding-top: 18px;
+            border-top: 1px solid #e6e6e6;
+            color: #999;
+            font-size: 0.86em;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 40px 20px; }
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 22px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="profile-photo">
-            <img src="img/me.JPG" alt="Ning Ding">
-        </div>
         <div class="header-info">
             <h1>Ning Ding</h1>
             <div class="chinese-name">Name in Chinese: <span>丁宁</span></div>
             <div class="affiliation">Undergraduate Student, Computer Science</div>
             <div class="affiliation">University of British Columbia</div>
             <div class="contact">
-                Email: <a href="mailto:nding04@student.ubc.ca">nding04@student.ubc.ca</a>
+                Email: <a href="mailto:nding04@student.ubc.ca">nding04@student.ubc.ca</a><br>
+                GitHub: <a href="https://github.com/nding0405" target="_blank" rel="noopener noreferrer">nding0405</a>
             </div>
         </div>
+        <div class="profile-photo">
+            <img src="img/me.JPG" alt="Ning Ding">
+        </div>
     </header>
+
+    <p class="intro">
+        I am an undergraduate researcher interested in systems, security, and formal
+        verification. I am <span class="highlight">applying to PhD programs for Fall 2027</span>.
+    </p>
 
     <section id="education">
         <h2>Education</h2>
         <div class="education-item">
             <strong>University of British Columbia</strong><br>
             B.Sc. in Computer Science<br>
-            <span class="date">September 2022 - May 2026 (Expected)</span><br>
-            GPA: 89.3/100
+            <span class="date">September 2022 &ndash; May 2026 (Expected)</span><br>
+            GPA: 89.7/100
+        </div>
+        <div class="education-item">
+            <strong>Research Assistant,
+            <a href="https://systopia.cs.ubc.ca/" target="_blank" rel="noopener noreferrer">Systopia Lab</a></strong><br>
+            University of British Columbia<br>
+            <span class="date">2026 &ndash; 2027 (Expected)</span>
         </div>
     </section>
 
@@ -238,34 +262,75 @@
         <h2>Research</h2>
 
         <h3>Research Projects</h3>
+
         <div class="research-project">
-            <h4>TLB Shootdown Protocols in Linux</h4>
-            <p>Exploring TLB shootdown protocols in the Linux kernel to improve performance through different propagation strategies. Profiling IPI (Inter-Processor Interrupt) sending and receiving times to identify optimization opportunities.</p>
+            <h4>Scalable TLB Shootdowns in Linux</h4>
+            <p>
+                Investigating how TLB shootdowns scale on large multicore systems.
+                The project explores topology-aware IPI propagation strategies in the
+                Linux kernel and evaluates their performance across hardware platforms
+                and workloads.
+            </p>
             <div class="supervisor">
-                Supervisor: <a href="https://retoachermann.ch/" target="_blank">Reto Achermann</a><br>
-                Co-supervised by: <a href="https://www.seltzer.com/margo/" target="_blank">Margo Seltzer</a>
+                Supervised by:
+                <a href="https://retoachermann.ch/" target="_blank" rel="noopener noreferrer">Reto Achermann</a>
+                and
+                <a href="https://www.seltzer.com/margo/" target="_blank" rel="noopener noreferrer">Margo Seltzer</a>
+            </div>
+        </div>
+
+        <div class="research-project">
+            <h4>vBPF: Concurrent eBPF Semantics</h4>
+            <p>
+                Working toward formalizing concurrent eBPF semantics in F* and building
+                an interpreter for exploring concurrent executions.
+            </p>
+            <div class="supervisor">
+                Supervised by:
+                <a href="https://www.cs.ubc.ca/~bestchai/" target="_blank" rel="noopener noreferrer">Ivan Beschastnikh</a>,
+                <a href="https://www.cs.ubc.ca/~alexsumm/" target="_blank" rel="noopener noreferrer">Alexander J. Summers</a>,
+                and
+                <a href="https://retoachermann.ch/" target="_blank" rel="noopener noreferrer">Reto Achermann</a><br>
+                Collaborator:
+                <a href="https://liyz.pl/" target="_blank" rel="noopener noreferrer">Yanze Li</a>
+            </div>
+        </div>
+
+        <div class="research-project">
+            <h4>CHERIoT Network Stack</h4>
+            <p>
+                Collaborating on the CHERIoT network stack, a compartmentalized network
+                stack for capability-based embedded systems.
+            </p>
+            <div class="supervisor">
+                Supervised by:
+                <a href="https://owl.eu.com/" target="_blank" rel="noopener noreferrer">Hugo Lefeuvre</a>
+                and
+                <a href="https://www.seltzer.com/margo/" target="_blank" rel="noopener noreferrer">Margo Seltzer</a>
             </div>
         </div>
 
         <h3>Research Interests</h3>
-        <p class="interests">Operating systems and systems in general. Currently exploring different areas within systems research to find my focus.</p>
+        <p class="interests">
+            Broad interests in systems, security, and formal verification (still investigating!).
+        </p>
     </section>
 
     <section id="teaching">
         <h2>Teaching</h2>
         <div class="teaching-item">
-            <strong>CPSC 313 - Computer Hardware and Operating Systems</strong><br>
+            <strong>CPSC 313 &ndash; Computer Hardware and Operating Systems</strong><br>
             Teaching Assistant<br>
             <span class="date">2025 Winter Term 2</span>
         </div>
     </section>
 
     <section id="awards">
-        <h2>Awards & Honors</h2>
+        <h2>Awards &amp; Honors</h2>
         <div class="award-item">
             <strong>Dean's Scholar</strong><br>
             University of British Columbia<br>
-            <span class="date">September 2023 - May 2024</span>
+            <span class="date">September 2023 &ndash; May 2024</span>
         </div>
     </section>
 
@@ -281,13 +346,14 @@
             </div>
             <p><strong>In loving memory of Pompom</strong><br>
             Name in Chinese: <span class="dog-chinese-name">绒球</span> (Rong Qiu)<br>
-            January 28, 2012 - December 29, 2025<br>
+            January 28, 2012 &ndash; December 29, 2025<br>
             My beloved companion who brought joy to every day.</p>
         </div>
     </section>
 
     <footer>
-        <p>Last updated: February 2026</p>
+        <span>Last updated: August 2026</span>
+        <span>Template design from <a href="https://github.com/jonbarron/website" target="_blank" rel="noopener noreferrer">Jon Barron</a></span>
     </footer>
 </body>
 </html>
